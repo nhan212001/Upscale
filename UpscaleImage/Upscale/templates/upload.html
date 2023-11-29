@@ -1,0 +1,13 @@
+<form method="POST" enctype="multipart/form-data">
+        {% csrf_token  %} 
+        <input type="file" name="img" accept="image/*"><br>
+        <input type="submit">
+    </form>
+<h2>Query:</h2>
+    {% if path %}
+    <img src="{{ path }}" width="300" height="300" >
+    {% endif %}
+{% if result %}
+<h2>Result:</h2>
+<img src="{{ result }}" width="300" height="300">
+{% endif %}
